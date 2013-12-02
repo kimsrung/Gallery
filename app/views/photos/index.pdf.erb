@@ -1,0 +1,20 @@
+<h1>Photos Gallery</h1>
+
+<table border="1px solid" align="center">
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Description</th>
+    </tr>
+  
+    <% @photos.each do |photo| %>
+      <tr>
+        <td class="img-rounded"><%=wicked_pdf_image_tag photo.image.url(:thumb)%></td>
+        <td><%= photo.name %></td>
+        <td><%= photo.location %></td>
+        <td><%= photo.description %></td>
+      </tr>
+    <% end %>
+ 
+</table>

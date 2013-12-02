@@ -1,0 +1,30 @@
+
+
+<p id="notice"><%= notice %></p>
+<div class="text-left">
+<p class="img-thumbnail">
+  <%=image_tag @photo.image.url(:medium) %>
+</p>
+	<p>
+  <strong>Name:</strong>
+  <%= @photo.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @photo.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @photo.description %>
+</p>
+<p>
+	<%= link_to 'Edit', edit_photo_path(@photo) %> |
+	<%= link_to 'Back', photos_path %> |
+	<%= link_to 'PDF', photo_path(@photo, :format => 'pdf') %>
+</p>
+</div>
+
+
+

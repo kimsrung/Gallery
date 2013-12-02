@@ -1,0 +1,32 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+  </head>
+<body>
+  <div align="center">
+    <p>
+      <%=wicked_pdf_image_tag @photo.image.url(:large)  %>
+    </p>
+    <p>
+      <strong>Photo : </strong>
+      <%= @photo.name %>
+    </p>
+
+    <p>
+      <strong>Taken Place : </strong>
+      <%= @photo.location %>
+    </p>
+
+    <p>
+      <strong>Description : </strong>
+      <%= @photo.description %>
+    </p>
+
+  </div>
+</body>
+</html>
+
+
+
